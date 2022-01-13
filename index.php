@@ -156,7 +156,7 @@
                             }
                             document.getElementById("budget' . $i . '").innerHTML = divideNumberByPieces(' . $results->data[$i]["budget"] . ');
                     </script>'; 
-                    } // с постером
+                    }
                                                                 
             } catch (TypeError) {
                 echo "";
