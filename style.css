@@ -1,0 +1,239 @@
+/* пагинация */
+.paginationLinks{
+    display: block;
+    margin: 0px auto;
+    width: fit-content;
+    margin-bottom: 3%;
+}
+.paginationLinks > li{
+    display: inline-block;
+    color: yellow;
+    font-weight: bolder;
+    list-style-type: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+}
+.paginationLinks > li > a{
+    text-decoration: none;
+    color: yellow;
+}
+.paginationLinks > li > a:hover{
+    color: rgb(92, 6, 163);    
+}
+.paginationLinks > .active > a{
+    color: white;
+    pointer-events: none;
+}
+.paginationLinks > .disabled,
+.paginationLinks > .disabled > a{
+    color: white;
+    pointer-events: none;
+}
+/* тело и обертка */
+body{
+    background-color: rgb(0, 0, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blanchedalmond;
+}
+.page{
+    margin: 5% auto 1% auto;    
+    background-color: rgb(49, 43, 43);
+    display: block;
+    width: 70%;
+    border-radius: 5px;
+    padding-bottom: 1%;
+}
+/* поиск и фильтры */
+.sandf{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: max-content; 
+}
+.search{    
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;    
+}
+#searchIn{
+    width: 90%;
+    height: 30px;
+    font-size: 18px; 
+    border-radius: 5px;      
+}
+#searchBu{
+    margin-left: 5px;
+    padding: 8px 16px 8px 16px;    
+    background-color: yellow;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#searchBu:hover{
+    border: 3px solid black;
+}
+/* фильтры и форма */
+details{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    display: inline-block;
+    width: 95%;
+        
+}
+details > .det{
+    display: inline-block;
+    padding-left: 10px;
+    width: fit-content;
+    margin-bottom: 4px; 
+}
+details > summary{
+    width: fit-content;
+    margin-right: 0%;
+    border-radius: 5px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    margin-bottom: 5px;
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;      
+}
+.summary2{
+    float: left;
+    margin-bottom: 30px;
+}
+.input-details{
+    display: inline-block;
+    padding-left: 5px;
+}
+.input-details2{
+    display: inline-block;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.input-details2 > *{
+    display: block;
+}
+#sumbit-wrap{
+    margin-left: 5px;
+}
+/* лист с фильмами */
+.list-of-movies{
+    display: block;
+    margin: 0% 2.5% 0% 2.5%;
+    font-size: 17px; 
+}
+ul{
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
+.movie-line{
+    margin-bottom: 20px;
+    background-color: rgb(85, 8, 8);
+    border-radius: 5px;
+    display: flex;
+}
+.movie-line > *{
+    display: inline-block;    
+    padding: 2px 2px 2px 2px;    
+}
+.mov-text-field{    
+    height: 200px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+        
+}
+.mov-text-field > *{
+    width: 100%;    
+}
+.title{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.poster-mov{
+    margin-right: 1%;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+/* отключить переносы где надо*/
+.no-wrap{
+    white-space: nowrap;
+}
+/* скрыть то, что должно быть скрыто */
+.hidden{
+    display: none;
+}
+/* поле ввода даты */
+#mdate{
+    width: 95px;
+}
+/* скрыть некрасивый календарь */
+#mdate::-webkit-inner-spin-button,
+#mdate::-webkit-calendar-picker-indicator{
+    display: none;
+}
+/* скрыть некрасивые стрелки у номеров */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+/* Кнопка загрузить постер */
+.custom-file-input::-webkit-file-upload-button {
+    display: none;
+}
+.custom-file-input::before {
+    content: 'Загрузить постер';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 2px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin-right: 5px;
+}
+.custom-file-input:hover::before {
+    border-color: black;
+}
+.custom-file-input:active {
+    outline: 0;
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+.custom-file-input{
+    width: 240px;
+}
+/* Кнопка подтвердить отправку формы */
+.custom-file-input2:active {    
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.custom-file-input2:hover{
+    border-color: black;
+}
+.custom-file-input2 {
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #e6f703, #90990b);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+
